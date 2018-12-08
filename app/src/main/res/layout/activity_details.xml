@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".activities.DetailsActivity">
+    <android.support.constraint.ConstraintLayout android:layout_width="match_parent"
+                                                 android:layout_height="wrap_content"
+                                                 android:paddingStart="16dp"
+                                                 android:paddingEnd="16dp"
+                                                 android:paddingBottom="8dp"
+                                                 android:paddingTop="8dp"
+                                                 android:background="@android:color/white"
+                                                 android:elevation="16dp"
+                                                 android:id="@+id/topMenu">
+        <android.support.v7.widget.AppCompatTextView android:layout_width="wrap_content"
+                                                     android:layout_height="wrap_content"
+                                                     android:padding="16dp"
+                                                     app:layout_constraintStart_toEndOf="@id/arrow"
+                                                     android:textStyle="bold"
+                                                     android:textColor="@android:color/black"
+                                                     android:textSize="16sp"
+                                                     android:text="An App"/>
+        <android.support.v7.widget.AppCompatImageView android:layout_width="wrap_content"
+                                                      android:layout_height="wrap_content"
+                                                      app:srcCompat="?attr/actionModeCloseDrawable"
+                                                      app:layout_constraintTop_toTopOf="parent"
+                                                      app:layout_constraintBottom_toBottomOf="parent"
+                                                      android:tint="@android:color/black"
+                                                      android:id="@+id/arrow"/>
+
+    </android.support.constraint.ConstraintLayout>
+    <android.support.v7.widget.AppCompatTextView android:layout_width="match_parent"
+                                                 android:layout_height="wrap_content"
+                                                 android:id="@+id/tvTitle"
+                                                 app:layout_constraintTop_toBottomOf="@id/topMenu"
+                                                 android:padding="16dp"
+                                                 style="@style/Base.TextAppearance.AppCompat.Title"/>
+    <android.support.v7.widget.AppCompatImageView android:layout_width="match_parent"
+                                                  android:layout_height="240dp"
+                                                  android:id="@+id/ivPoster"
+                                                  app:layout_constraintTop_toBottomOf="@id/tvTitle"/>
+    <android.support.v7.widget.AppCompatTextView android:layout_width="match_parent"
+                                                 android:layout_height="wrap_content"
+                                                 android:id="@+id/tvOverview"
+                                                 app:layout_constraintTop_toBottomOf="@id/ivPoster"
+                                                 android:padding="16dp"/>
+</android.support.constraint.ConstraintLayout>
